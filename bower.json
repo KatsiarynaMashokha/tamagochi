@@ -1,0 +1,20 @@
+{
+  "name": "hungry-cthulhu",
+  "description": "Feed Cthulhu so he stays asleep",
+  "main": "index.js",
+  "authors": [
+    "Rich Garrick"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cthulhu"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
