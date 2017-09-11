@@ -13,13 +13,14 @@
       <h1>Feed Him</h1>
       <h3>test 3</h3>
       <div class="">
-        <label for="createAnimal">Enter animal name</label>
-        <input type="text" name="" value="">
-        <button type="button" name="button">Create Animal</button>
-
+        <form id="createAnimal">
+          <label for="createAnimal">Enter animal name</label>
+          <input type="text" id="animalName">
+          <button type="submit" name="button">Create Animal</button>
+        </form>
       </div>
       <div class="from-group">
-        <select id="feed" name="">
+        <select id="foodType" name="">
           <option value="eatSmall">Eat Small</option>
           <option value="eatMedium">Eat Medium</option>
           <option value="eatLarge">Eat Large</option>
@@ -31,14 +32,14 @@
         <button type="button" name="button">Eat</button>
       </div>
       <div class="from-group">
-        <select id="sleep" name="">
+        <select id="sleepType" name="">
           <option value="sleepSmall">Sleep Small</option>
           <option value="sleepSpecialBonus">Sleep Bonus</option>
         </select>
         <button type="button" name="button">Sleep</button>
       </div>
       <div class="from-group">
-        <select id="play" name="">
+        <select id="playType" name="">
           <option value="playSmall">Play Small</option>
           <option value="playMedium">Play Medium</option>
           <option value="playLarge">Play Large</option>
@@ -48,16 +49,23 @@
 
       </div>
       <div class="from-group">
-        <button type="button" name="button">Poop</button>
+        <select id="poopType" name="">
+          <option value="poopSmall">Poop Small</option>
+          <option value="poopBig">Poop Big</option>
+        </select>
+
+        <button id="poop" type="button">Poop</button>
 
       </div>
       <div class="">
-        <h2 id="getHealthLevel"></h2>
-        <button type="button" name="button">Get Health Level</button>
-
+        <h2 ></h2>
+        <button id="getHealthLevel" type="button" name="button">Get Health Level</button>
+        <p>Health level: <span id="healthText"></span></p>
+        <p>Sleep level: <span id="sleepText"></span></p>
+        <p>Food level: <span id="foodText"></span></p>
+        <p>Play level: <span id="playText"></span></p>
+        <p>Poop level: <span id="poopText"></span></p>
       </div>
-
     </div>
-
   </body>
 </html>

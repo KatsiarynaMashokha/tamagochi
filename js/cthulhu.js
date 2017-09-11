@@ -74,9 +74,11 @@ poop: function(amount) {
     return `The tamagotchi went to poop in the ${toilet}. Poop level goes up ${amount}!`;
   };
 },
-
+eatSmall: feed(5),
+eatMedium: feed(10)
 
 };
+
 
 tamagotchi.eatSmall = tamagotchi.feed(5);
 tamagotchi.eatMedium = tamagotchi.feed(10);

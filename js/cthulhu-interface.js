@@ -1,42 +1,60 @@
 import { tamagotchi } from './../js/cthulhu.js';
 
-$(function (event) {
-  event.preventDefault();
-  $('#createAnimal').click(function() {
-    var animalType = $('#animalType').val();
-    var tamagotchiPet = new tamagotchi();
+$(function () {
+  $('#createAnimal').submit(function(pickles) {
+    pickles.preventDefault();
+    let animalName = $('#animalName').val();
+    //let tamagotchi = tamagotchi;
   });
 
 
   $('#feed').click(function() {
-    var foodType = $('#foodType').val();
+    let foodType = $('#foodType').val();
     //create function using foodType
-    var foodFunction = tamagotchiPet + '.' +   foodType + '()';
-    functionCall();
+    let foodFunction = tamagotchi + '.' +   foodType + '()';
+    foodFunction();
+    console.log(tamagotchi.foodLevel);
+
   });
 
 
   $('#sleep').click(function() {
-    var sleepType = $('#sleepType').val();
-    var sleepFunction = tamagotchiPet + '.' +   sleepType + '()';
+    let sleepType = $('#sleepType').val();
+    let sleepFunction = tamagotchi + '.' +   sleepType + '()';
     sleepFunction();
+    console.log(tamagotchi.sleepLevel);
+
   });
 
   $('#play').click(function() {
-    var playType = $('#playType').val();
-    var playFunction = tamagotchiPet + '.' +   playType + '()';
+    let playType = $('#playType').val();
+    let playFunction = tamagotchi + '.' +   playType + '()';
+    console.log(tamagotchi.playLevel);
     playFunction();
+
   });
 
   $('#poop').click(function() {
-    var poopType = $('#poopType').val();
-    var poopFunction = tamagotchiPet + '.' +   poopType + '()';
-    poopFunction();
+    let poopType = $('#poopType').val();
+    console.log(poopType);
+    let poopFunction = 'tamagotchi' + '.' +   poopType + '();';
+    poopFunction;
+    // tamagotchi.poopBig();
+    console.log(poopFunction);
+    return poopFunction;
+
   });
 
   $('#getHealthLevel').click(function() {
-    $('#health').text(tamagotchiPet.healthLevel);
+    $('#healthText').text(tamagotchi.healthLevel);
+    $('#sleepText').text(tamagotchi.sleepLevel);
+    $('#foodText').text(tamagotchi.foodLevel);
+    $('#playText').text(tamagotchi.playLevel);
+    $('#poopText').text(tamagotchi.poopLevel);
+    console.log(tamagotchi.healthLevel);
   });
+
+
 
 
 });
